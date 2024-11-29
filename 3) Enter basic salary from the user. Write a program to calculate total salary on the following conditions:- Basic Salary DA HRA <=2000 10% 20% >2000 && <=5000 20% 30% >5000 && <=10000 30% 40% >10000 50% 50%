@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    float basicSalary, da, hra, totalSalary;
+    scanf("%f", &basicSalary);
+    if (basicSalary <= 2000) {
+        da = basicSalary * 0.1;
+        hra = basicSalary * 0.2;
+    } else if (basicSalary <= 5000) {
+        da = basicSalary * 0.2;
+        hra = basicSalary * 0.3;
+    } else if (basicSalary <= 10000) {
+        da = basicSalary * 0.3;
+        hra = basicSalary * 0.4;
+    } else {
+        da = basicSalary * 0.5;
+        hra = basicSalary * 0.5;
+    }
+    totalSalary = basicSalary + da + hra;
+    printf("%.2f", totalSalary);
+    return 0;
+}
