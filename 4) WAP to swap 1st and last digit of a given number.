@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int number, firstDigit, lastDigit, numberOfDigits, swappedNumber;
+    scanf("%d", &number);
+    lastDigit = number % 10;
+    numberOfDigits = log10(number);
+    firstDigit = number / pow(10, numberOfDigits);
+    swappedNumber = lastDigit * pow(10, numberOfDigits) + (number % (int)pow(10, numberOfDigits)) / 10 * 10 + firstDigit;
+    printf("%d", swappedNumber);
+    return 0;
+}
